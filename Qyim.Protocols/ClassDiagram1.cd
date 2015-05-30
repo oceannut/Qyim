@@ -1,0 +1,56 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="Qyim.Protocols.BaseData" Collapsed="true">
+    <Position X="7.5" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AgACAAAAAAAAAQAAAAACAAAAAAAIAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>BaseData.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Error" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="Qyim.Protocols.DataError" Collapsed="true">
+    <Position X="7.5" Y="1.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAgAAAAAAAgAAAABAAAAgAAAAAAAAAAAAA=</HashCode>
+      <FileName>DataError.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Qyim.Protocols.IQ" Collapsed="true">
+    <Position X="5.25" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAA=</HashCode>
+      <FileName>IQ.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Qyim.Protocols.Message" Collapsed="true">
+    <Position X="11" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAQAAAAACAAA=</HashCode>
+      <FileName>Message.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Qyim.Protocols.Presence" Collapsed="true">
+    <Position X="8.75" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAEAIAAAAAEAAAAAABAAAAAAAAAAQAAAIAAAAA=</HashCode>
+      <FileName>Presence.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Qyim.Protocols.ErrorIQ" Collapsed="true">
+    <Position X="4.25" Y="6" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>ErrorIQ.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Qyim.Protocols.EmptyResultIQ" Collapsed="true">
+    <Position X="6.5" Y="6" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>EmptyResultIQ.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Microsoft YaHei" Size="9" />
+</ClassDiagram>
