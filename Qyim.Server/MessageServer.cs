@@ -10,10 +10,12 @@ using Nega.Modularity;
 
 namespace Qyim.Server
 {
-    public class MessageServer : BasicModule
+    public sealed class MessageServer : BasicModule
     {
 
         private readonly ILogger logger;
+        private readonly List<IModule> modules;
+        
 
         public override string Name
         {
@@ -23,6 +25,17 @@ namespace Qyim.Server
         public MessageServer()
         {
             this.logger = LogManager.GetLogger(typeof(MessageServer));
+            this.modules = new List<IModule>();
+        }
+
+        public void Start()
+        {
+
+        }
+
+        public void Stop()
+        {
+
         }
 
         protected override void OnInitialize()

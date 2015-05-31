@@ -4,15 +4,16 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{892D3862-B744-4AC0-9E70-16D8DF81BD3A}</ProjectGuid>
-    <OutputType>Library</OutputType>
+    <ProjectGuid>{FB916C46-3A6E-49ED-AA15-1FA9B4A12066}</ProjectGuid>
+    <OutputType>Exe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Qyim.Protocols</RootNamespace>
-    <AssemblyName>Qyim.Protocols</AssemblyName>
+    <RootNamespace>Qyim.Client.Wcf.ConsoleClient</RootNamespace>
+    <AssemblyName>Qyim.Client.Wcf.ConsoleClient</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
@@ -22,6 +23,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugType>pdbonly</DebugType>
     <Optimize>true</Optimize>
     <OutputPath>bin\Release\</OutputPath>
@@ -32,7 +34,7 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
-    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -40,19 +42,25 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Auth\AuthenticationResultIQ.cs" />
-    <Compile Include="Auth\AuthenticationIQ.cs" />
-    <Compile Include="BaseData.cs" />
-    <Compile Include="DataError.cs" />
-    <Compile Include="EmptyResultIQ.cs" />
-    <Compile Include="ErrorIQ.cs" />
-    <Compile Include="IQ.cs" />
-    <Compile Include="Message.cs" />
-    <Compile Include="Presence.cs" />
+    <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="ClassDiagram1.cd" />
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Qyim.Client.Wcf\Qyim.Client.Wcf.csproj">
+      <Project>{145c9ce7-0877-4316-b091-66be97bc81ea}</Project>
+      <Name>Qyim.Client.Wcf</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Qyim.Protocols\Qyim.Protocols.csproj">
+      <Project>{892d3862-b744-4ac0-9e70-16d8df81bd3a}</Project>
+      <Name>Qyim.Protocols</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Qyim.Wcf\Qyim.Wcf.csproj">
+      <Project>{806d743a-e6c2-4237-a7ab-8012016f7c28}</Project>
+      <Name>Qyim.Wcf</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
