@@ -22,26 +22,20 @@ namespace Qyim.Client.Wcf.ConsoleClient
             EndpointAddress tcpAddr = new EndpointAddress(string.Format("net.tcp://{0}:{1}/MessageService/", "127.0.0.1", 1980));
             IMessageService client = new DuplexChannelFactory<IMessageService>(instanceContext, tcpBinding, tcpAddr).CreateChannel();
 
-            string request = Guid.NewGuid().ToString();
-            Console.WriteLine("request=" + request);
-            string response = client.Transfer(request);
-            Console.WriteLine("response=" + response);
-
-            client.TransferData(new IQ
+            client.Transfer(new IQ
             {
                 From = "zsp"
             });
 
-            client.TransferData(new Qyim.Protocols.Message
+            client.Transfer(new Qyim.Protocols.Message
             {
                 From = "lj"
             });
 
-            Qyim.Protocols.BaseData data = client.TransferData(new Qyim.Protocols.Presence
+            client.Transfer(new Qyim.Protocols.Presence
             {
                 From = "zqy"
             });
-            Console.WriteLine("data=" + data.To);
 
             Console.ReadKey();
 

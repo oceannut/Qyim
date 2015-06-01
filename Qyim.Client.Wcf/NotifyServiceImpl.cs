@@ -12,12 +12,12 @@ namespace Qyim.Client.Wcf
     public class NotifyServiceImpl : INotifyService
     {
 
-        public void Notify(string message)
-        {
-            Console.WriteLine(message);
-        }
+        //public void Notify(string message)
+        //{
+        //    Console.WriteLine(message);
+        //}
 
-        public void NotifyData(BaseData data)
+        public void Notify(BaseData data)
         {
             Console.WriteLine(data.From);
         }

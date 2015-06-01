@@ -15,11 +15,14 @@ namespace Qyim.Wcf
     public interface IMessageService
     {
 
-        [OperationContract]
-        string Transfer(string message);
+        [OperationContract(IsInitiating = true, IsTerminating = false)]
+        AuthenticationResultIQ Login(AuthenticationIQ iq);
+
+        [OperationContract(IsInitiating = false, IsTerminating = true)]
+        AuthenticationResultIQ Logout(AuthenticationIQ iq);
 
         [OperationContract]
-        BaseData TransferData(BaseData data);
+        void Transfer(BaseData data);
 
         [OperationContract]
         void KeepAlive();

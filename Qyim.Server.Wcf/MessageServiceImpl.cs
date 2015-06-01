@@ -24,22 +24,17 @@ namespace Qyim.Server.Wcf
             }
         }
 
-        public string Transfer(string message)
+        public AuthenticationResultIQ Login(AuthenticationIQ iq)
         {
-            OperationContext context = OperationContext.Current;
-            MessageProperties properties = context.IncomingMessageProperties;
-            RemoteEndpointMessageProperty remoteEndpointProperty =
-                properties[RemoteEndpointMessageProperty.Name] as RemoteEndpointMessageProperty;
-
-            Console.WriteLine(
-                string.Format("request from {0}", remoteEndpointProperty.Address));
-            Console.WriteLine(message);
-            Callback.Notify("hello "+ message);
-
-            return message;
+            throw new NotImplementedException();
         }
 
-        public BaseData TransferData(BaseData data)
+        public AuthenticationResultIQ Logout(AuthenticationIQ iq)
+        {
+            throw new NotImplementedException();
+        }
+
+        public void Transfer(BaseData data)
         {
             OperationContext context = OperationContext.Current;
             MessageProperties properties = context.IncomingMessageProperties;
@@ -47,12 +42,10 @@ namespace Qyim.Server.Wcf
                 properties[RemoteEndpointMessageProperty.Name] as RemoteEndpointMessageProperty;
 
             Console.WriteLine(
-                string.Format("request from {0}", remoteEndpointProperty.Address));
+                string.Format("request from {0}, {1}", remoteEndpointProperty.Address, context.SessionId));
             Console.WriteLine(data.From);
             data.To = "ha";
-            Callback.NotifyData(data);
-
-            return data;
+            Callback.Notify(data);
         }
 
         public void KeepAlive()

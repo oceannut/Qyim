@@ -14,10 +14,7 @@ namespace Qyim.Wcf
     {
 
         [OperationContract(IsOneWay = true)]
-        void Notify(string message);
-
-        [OperationContract(IsOneWay = true)]
-        void NotifyData(BaseData data);
+        void Notify(BaseData data);
 
     }
 
